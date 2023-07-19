@@ -19,8 +19,6 @@ We have two seprate SDKs to handle Card related operations i.e `SimpliFiCard` an
 - [Release Notes and Versioning](#release-notes-and-versioning)
 - [Support and Contact Information](#support-and-contact-information)
 
-Certainly! Here's the updated installation section with the additional snippet included:
-
 ## Installation
 
 ### SimpliFiCard SDK
@@ -28,7 +26,6 @@ To install the SimpliFiCard SDK, follow these steps:
 
 1. Add the SimpliFi source repository at the top of your `Podfile`:
    ```ruby
-   source 'https://cdn.cocoapods.org/'
    source 'https://github.com/simplifipay/ios-sdks.git'
    ```
 
@@ -37,14 +34,14 @@ To install the SimpliFiCard SDK, follow these steps:
    pod 'SimpliFiCard'
    ```
 
-3. Run `pod install` in your project directory to install the SDK and their dependencies.
+3. Run `pod install` in your project directory to install the SDK and its dependencies.
 
 4. Import the SimpliFiCard module in your Swift files:
    ```swift
    import SimpliFiCard
    ```
 
-5. If you're using the SimpliFiEkyc SDK, add the following snippet to your `Podfile` to configure specific build settings:
+5. Add the following snippet to your `Podfile` to configure specific build settings:
    ```ruby
    post_install do |installer|
        installer.pods_project.targets.each do |target|
@@ -84,7 +81,7 @@ To install the SimpliFi SDKs, follow these steps:
    import SimpliFiEkyc
    ```
 
-5. If you're using the SimpliFiEkyc SDK, add the following snippet to your `Podfile` to configure specific build settings:
+5. Add the following snippet to your `Podfile` to configure specific build settings:
    ```ruby
    post_install do |installer|
        installer.pods_project.targets.each do |target|
@@ -110,7 +107,7 @@ To install the SimpliFi SDKs, follow these steps:
 The SimpliFi SDK requires a minimum iOS version of 13.0 or later. Please ensure that your project's deployment target is set accordingly.
 
 ## SDK Initialization
-Before using the SimpliFi SDKs, you need to initialize the SDK with the base URL and other necessary configurations. To initialize the SDK, use the following method:
+Before using the SimpliFi SDKs, you need to initialize the SDK with the base URL. To initialize the SDK, use the following method:
 
 ### `SFCore.initialize(baseUrl: String)`
 
@@ -123,7 +120,7 @@ This method initializes the networking stack, logger, and sets the default theme
 Here's an example of how to initialize the SimpliFi SDK:
 
 ```swift
-SFCore.initialize(baseUrl: "BASE_URL_PROVIDED_BY_SIMPLIFI_TEAM")
+SFCore.initialize(baseUrl: "PROVIDED_URL")
 ```
 
 Make sure to replace the `baseUrl` parameter with the actual base URL of your SimpliFi server.
@@ -168,14 +165,14 @@ Sets the PIN of a card.
 - `request`: An `SFRequest` object that includes the necessary parameters for setting the PIN.
 - `controller`: The view controller from which the request should be initiated.
 
-##### SFRequest Structure
+#### SFRequest Structure
 
 The `SFRequest` structure defines the parameters required for making requests to SimpliFiCard methods. It includes the following properties:
 
 - `userUuid`: The UUID of the user associated with the card.
 - `cardUuid`: The UUID of the card.
 - `companyUuid`: The UUID of the company.
-- `token`: The authentication token for the request.
+- `token`: The authentication token with `SDK_ADMIN` role for the request.
 
 ## SimpliFiEkyc SDK
 The SimpliFiEkyc SDK enables electronic Know Your Customer (eKYC) verification within your mobile applications. With SimpliFiEkyc, developers can easily initiate eKYC journeys, track their progress, and handle the verification results. This SDK streamlines the user verification process and enhances the security of your application.
@@ -219,4 +216,4 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - eKYC verification journey.
 
 ## Support and Contact Information
-If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at support@simplifipay.com.
+If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at daud.mujib@simplifipay.com.
