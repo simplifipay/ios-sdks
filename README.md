@@ -15,6 +15,9 @@ We have two seprate SDKs to handle Card related operations i.e `SimpliFiCard` an
 - [SimpliFiEkyc SDK](#simplifiekyc-sdk)
   - [API Reference](#api-reference-1)
   - [EkycDelegate Protocol](#ekycdelegate-protocol)
+- [Logging](#logging)
+  - [Custom Logger](#custom-logger)
+- [Customizing UI](#customizing-ui)
 - [Security Considerations](#security-considerations)
 - [Release Notes and Versioning](#release-notes-and-versioning)
 - [Support and Contact Information](#support-and-contact-information)
@@ -201,6 +204,93 @@ The `EkycDelegate` protocol defines the methods that can be implemented by a del
 
 Make sure to implement the `EkycDelegate` methods to handle the eKYC verification process events and provide appropriate actions or feedback to the users.
 
+## Logging
+
+The SimpliFiCard SDK includes SimpliFiLogger SDK, which logs any network errors to Mixpanel. By default, logging is enabled. You can enable or disable logging using the following methods:
+
+```swift
+import SimpliFiLogger
+```
+
+To enable logging, use:
+```swift
+SFLogger.enableLogging()
+```
+
+To disable logging, use:
+```swift
+SFLogger.disableLogging()
+```
+
+By enabling logging, network errors will be logged to Mixpanel for analysis and troubleshooting purposes.
+
+### Custom Logger
+
+You can set you own logger instead. To set custom logger implement `SFLoggable` protocol. And use it as:
+
+```swift
+import SimpliFiLogger
+
+class MyLogger: SFLoggable {
+  // implement methods
+}
+
+SFLogger.setCustomLogger(MyLogger())
+```
+
+Now all the logs will be redirected to your custom logger instead of default logger.
+
+## Customizing UI
+
+The SimpliFiCard SDK allows you to customize the look and feel of the views displayed by the SDK. To change UI elements, you can use the `SFTheme` class.
+
+The `SFTheme` class provides methods to customize the UI elements used by the SimpliFi SDKs. You can customize the following elements. Supported Fonts are defined `SFFont` enum and supported colors are define in `SFColor` enum.
+
+- `headerFont`: Specifies the font for the header text. **DEFAULT = SFFont.montserrat**
+- `bodyFont`: Specifies the font for the body text. **DEFAULT = SFFont.montserrat**
+- `backgroundColor`: Specifies the background color of views. **DEFAULT = SFColor.white**
+- `buttonBackgroundColor`: Specifies the background color of Buttons. **DEFAULT = SFColor.blue**
+- `buttonTextColor`: Specifies the text color on the Buttons. **DEFAULT = SFColor.white**
+- `bodyTextColor`: Specifies the text color of body. **DEFAULT = SFColor.black**
+- `cardTextColor`: Specifies the text color on the card. **DEFAULT = SFColor.white**
+- `headerTextColor`: Specifies the text color of header. **DEFAULT = SFColor.black**
+
+Here's an example of how to use the `SFTheme` class:
+
+```swift
+import SimpliFiTheme
+
+SFTheme.headerFont             = SFFont.bukra
+SFTheme.backgroundColor        = SFColor.black
+.
+.
+.
+```
+
+#### SFFont Enum
+
+```swift
+enum SFFont: String {
+    case montserrat
+    case bukra
+    case sanFrancisco
+}
+```
+
+#### SFColor Enum
+
+```swift
+enum SFColor: String {
+    case gray = "#E0E0E0"
+    case white = "#FFFFFF"
+    case blue = "#2E7FFD"
+    case error = "#FA4949"
+    case black = "#424242"
+}
+```
+
+By customizing the theme options, you can align the appearance of the SDK with your application's design and branding.
+
 ## Security Considerations
 SimpliFi SDKs prioritize security when handling sensitive data, such as card information and user
 
@@ -216,6 +306,13 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
+ 
+- SimpliFiLogger SDK, version 3.0.0
+  - Logs network error to Mixpanel
+  - Set custom logger
+
+- SimpliFiTheme SDK, version 3.0.0
+  - Set custom UI theme
 
 ## Support and Contact Information
 If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at daud.mujib@simplifipay.com.
