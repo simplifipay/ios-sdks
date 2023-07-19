@@ -26,6 +26,7 @@ To install the SimpliFiCard SDK, follow these steps:
 
 1. Add the SimpliFi source repository at the top of your `Podfile`:
    ```ruby
+   source 'https://cdn.cocoapods.org/'
    source 'https://github.com/simplifipay/ios-sdks.git'
    ```
 
