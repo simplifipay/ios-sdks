@@ -33,15 +33,7 @@ To install the SimpliFiCard SDK, follow these steps:
    ```ruby
    pod 'SimpliFiCard'
    ```
-
-3. Run `pod install` in your project directory to install the SDK and its dependencies.
-
-4. Import the SimpliFiCard module in your Swift files:
-   ```swift
-   import SimpliFiCard
-   ```
-
-5. Add the following snippet to your `Podfile` to configure specific build settings:
+3. Add the following snippet to your `Podfile` to configure specific build settings:
    ```ruby
    post_install do |installer|
        installer.pods_project.targets.each do |target|
@@ -56,6 +48,15 @@ To install the SimpliFiCard SDK, follow these steps:
        end
    end
    ```
+
+4. Run `pod install` in your project directory to install the SDK and its dependencies.
+
+5. Import the SimpliFiCard module in your Swift files:
+   ```swift
+   import SimpliFiCard
+   ```
+
+---
 
 ### SimpliFiEkyc and SimpliFiCard SDKs
 To install the SimpliFi SDKs, follow these steps:
@@ -72,16 +73,8 @@ To install the SimpliFi SDKs, follow these steps:
    pod 'SimpliFiCard'
    pod 'SimpliFiEkyc'
    ```
-
-3. Run `pod install` in your project directory to install the SDKs and their dependencies.
-
-4. Import the SimpliFiCard and SimpliFiEkyc modules in your Swift files:
-   ```swift
-   import SimpliFiCard
-   import SimpliFiEkyc
-   ```
-
-5. Add the following snippet to your `Podfile` to configure specific build settings:
+   
+3. Add the following snippet to your `Podfile` to configure specific build settings:
    ```ruby
    post_install do |installer|
        installer.pods_project.targets.each do |target|
@@ -101,6 +94,14 @@ To install the SimpliFi SDKs, follow these steps:
          end
        end
    end
+   ```
+
+4. Run `pod install` in your project directory to install the SDKs and their dependencies.
+
+5. Import the SimpliFiCard and SimpliFiEkyc modules in your Swift files:
+   ```swift
+   import SimpliFiCard
+   import SimpliFiEkyc
    ```
 
 **Note:**
