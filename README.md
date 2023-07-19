@@ -210,9 +210,9 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 - SimpliFiCard SDK, version 4.0.0
   - Show card details.
   - Request physical card.
-  - Activating card.
-  - Retrieving PIN.
-  - Setting PIN.
+  - Activate card.
+  - Retrieve PIN.
+  - Set PIN.
  
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
