@@ -123,7 +123,7 @@ This method initializes the networking stack, logger, and sets the default theme
 Here's an example of how to initialize the SimpliFi SDK:
 
 ```swift
-SFCore.initialize(baseUrl: "https://api.simplifipay.com")
+SFCore.initialize(baseUrl: "BASE_URL_PROVIDED_BY_SIMPLIFI_TEAM")
 ```
 
 Make sure to replace the `baseUrl` parameter with the actual base URL of your SimpliFi server.
