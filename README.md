@@ -260,8 +260,8 @@ Here's an example of how to use the `SFTheme` class:
 ```swift
 import SimpliFiUI
 
-SFTheme.headerFont             = SFFont.bukra
-SFTheme.backgroundColor        = SFColor.black
+SFTheme.headerFont      = SFFont.bukra
+SFTheme.backgroundColor = SFColor.black
 .
 .
 .
