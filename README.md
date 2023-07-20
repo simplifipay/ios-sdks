@@ -258,7 +258,7 @@ The `SFTheme` class provides methods to customize the UI elements used by the Si
 Here's an example of how to use the `SFTheme` class:
 
 ```swift
-import SimpliFiTheme
+import SimpliFiUI
 
 SFTheme.headerFont             = SFFont.bukra
 SFTheme.backgroundColor        = SFColor.black
@@ -311,7 +311,7 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Logs network error to Mixpanel
   - Set custom logger
 
-- SimpliFiTheme SDK, version 3.0.0
+- SimpliFiUI SDK, version 3.0.0
   - Set custom UI theme
 
 ## Support and Contact Information
