@@ -37,25 +37,10 @@ To install the SimpliFiCard SDK, follow these steps:
    ```ruby
    pod 'SimpliFiCard'
    ```
-3. Add the following snippet to your `Podfile` to configure specific build settings:
-   ```ruby
-   post_install do |installer|
-       installer.pods_project.targets.each do |target|
-         target.build_configurations.each do |config|
    
-           if ['AEOTPTextField',
-               'Mixpanel-swift'].include?(target.name)
-               config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-           end
-   
-         end
-       end
-   end
-   ```
+3. Run `pod install` in your project directory to install the SDK and its dependencies.
 
-4. Run `pod install` in your project directory to install the SDK and its dependencies.
-
-5. Import the SimpliFiCard module in your Swift files:
+4. Import the SimpliFiCard module in your Swift files:
    ```swift
    import SimpliFiCard
    ```
@@ -74,37 +59,13 @@ To install the SimpliFi SDKs, follow these steps:
 
 2. Add SimpliFiCard and SimpliFiEkyc as dependencies in your project's `Podfile`:
    ```ruby
-   pod 'SimpliFiCard'
    pod 'SimpliFiEkyc'
    ```
-   
-3. Add the following snippet to your `Podfile` to configure specific build settings:
-   ```ruby
-   post_install do |installer|
-       installer.pods_project.targets.each do |target|
-         target.build_configurations.each do |config|
-           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-   
-           if ['MLKitObjectDetection-MLKitObjectDetectionResources',
-               'MLKitObjectDetectionCommon-MLKitObjectDetectionCommonResources',
-               'MLKitTextRecognition-LatinOCRResources'].include?(target.name)
-                 config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
-           end
-   
-           if ['AEOTPTextField',
-               'Mixpanel-swift'].include?(target.name)
-               config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-           end
-         end
-       end
-   end
-   ```
 
-4. Run `pod install` in your project directory to install the SDKs and their dependencies.
+3. Run `pod install` in your project directory to install the SDKs and their dependencies.
 
-5. Import the SimpliFiCard and SimpliFiEkyc modules in your Swift files:
+4. Import the SimpliFiCard and SimpliFiEkyc modules in your Swift files:
    ```swift
-   import SimpliFiCard
    import SimpliFiEkyc
    ```
 
@@ -297,12 +258,18 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 4.0.1
+  - Minor fixes.
+
 - SimpliFiCard SDK, version 4.0.0
   - Show card details.
   - Request physical card.
   - Activate card.
   - Retrieve PIN.
   - Set PIN.
+
+- SimpliFiEKyc SDK, version 4.0.3
+  - Minor fixes.
  
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
@@ -310,6 +277,9 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 - SimpliFiLogger SDK, version 3.0.0
   - Logs network error to Mixpanel
   - Set custom logger
+ 
+- SimpliFiUI SDK, version 3.0.3
+  - Minor fixes
 
 - SimpliFiUI SDK, version 3.0.0
   - Set custom UI theme
