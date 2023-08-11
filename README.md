@@ -35,7 +35,20 @@ To install the SimpliFiCard SDK, follow these steps:
 
 2. Add SimpliFiCard as dependency in your project's `Podfile`:
    ```ruby
+   use_frameworks!
+   
    pod 'SimpliFiCard'
+
+   required_dynamic_frameworks = ['Mixpanel-swift', 'AEOTPTextField']
+   post_install do |installer|
+     installer.pods_project.targets.each do |target|
+       target.build_configurations.each do |config|
+         if required_dynamic_frameworks.include?(target.name)
+           config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+         end
+       end
+     end
+   end
    ```
    
 3. Run `pod install` in your project directory to install the SDK and its dependencies.
