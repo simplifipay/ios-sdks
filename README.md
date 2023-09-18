@@ -287,18 +287,24 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
 
+- SimpliFiLogger SDK, version 3.1.5
+  - Minor fixes.
+
+- SimpliFiLogger SDK, version 3.1.4
+  - Minor fixes.
+
 - SimpliFiLogger SDK, version 3.1.3
-  - Console logger is added as a default logger
+  - Console logger is added as a default logger.
  
 - SimpliFiLogger SDK, version 3.0.0
-  - Logs network error to Mixpanel
-  - Set custom logger
+  - Logs network error to Mixpanel.
+  - Set custom logger.
  
 - SimpliFiUI SDK, version 3.0.3
-  - Minor fixes
+  - Minor fixes.
 
 - SimpliFiUI SDK, version 3.0.0
-  - Set custom UI theme
+  - Set custom UI theme.
 
 ## Support and Contact Information
 If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at daud.mujib@simplifipay.com.
