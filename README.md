@@ -271,6 +271,9 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 4.0.5
+  - General Improvements.
+
 - SimpliFiCard SDK, version 4.0.1
   - Minor fixes.
 
@@ -280,6 +283,10 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Activate card.
   - Retrieve PIN.
   - Set PIN.
+
+
+- SimpliFiEKyc SDK, version 4.0.7
+  - General Improvements.
 
 - SimpliFiEKyc SDK, version 4.0.3
   - Minor fixes.
