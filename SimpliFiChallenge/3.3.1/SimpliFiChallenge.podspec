@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks = 'SimpliFiChallenge.xcframework'
   spec.swift_version = '5.0'
   
-  spec.dependency 'AEOTPTextField'
+  spec.dependency 'AEOTPTextField', '1.2.6'
   spec.dependency 'SimpliFiUI'
   
 end
