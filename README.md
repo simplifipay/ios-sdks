@@ -178,6 +178,17 @@ The `EkycDelegate` protocol defines the methods that can be implemented by a del
 
 Make sure to implement the `EkycDelegate` methods to handle the eKYC verification process events and provide appropriate actions or feedback to the users.
 
+## Error Handling
+
+You can set an error handler that will be invoked when the `AccessToken` passed in `SFRequest` is invalid.
+
+To set the handler use:
+```swift
+SFCore.setErrorHandler { error in
+   // This handler will be invoked when the there is an issue with the accessToken
+}
+```
+
 ## Logging
 
 The SimpliFiCard SDK includes SimpliFiLogger SDK, which logs any network errors to Mixpanel. By default, logging is enabled. You can enable or disable logging using the following methods:
@@ -271,6 +282,10 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 4.3.2
+  - General Improvements.
+  - Added a error callback that will be invoked if the accesstoken passed is invalid.
+
 - SimpliFiCard SDK, version 4.0.5
   - General Improvements.
 
@@ -284,6 +299,10 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Retrieve PIN.
   - Set PIN.
 
+
+- SimpliFiEKyc SDK, version 4.3.2
+  - General Improvements.
+  - Added a error callback that will be invoked if the accesstoken passed is invalid.
 
 - SimpliFiEKyc SDK, version 4.0.7
   - General Improvements.
