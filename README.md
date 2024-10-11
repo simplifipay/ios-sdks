@@ -282,6 +282,11 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 5.0.0
+  - Added support for multilingual. SDK language will remains same as application's language. Supported lanugages are as follows:
+    - English (default)
+    - Arabic
+
 - SimpliFiCard SDK, version 4.3.2
   - General Improvements.
   - Added a error callback that will be invoked if the accesstoken passed is invalid.
@@ -300,6 +305,12 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
   - Set PIN.
 
 
+
+- SimpliFiEkyc SDK, version 5.0.0
+  - Added support for multilingual. SDK language will remains same as application's language. Supported lanugages are as follows:
+    - English (default)
+    - Arabic
+
 - SimpliFiEKyc SDK, version 4.3.2
   - General Improvements.
   - Added a error callback that will be invoked if the accesstoken passed is invalid.
@@ -312,25 +323,6 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  
 - SimpliFiEKyc SDK, version 4.0.0
   - eKYC verification journey.
-
-- SimpliFiLogger SDK, version 3.1.5
-  - Minor fixes.
-
-- SimpliFiLogger SDK, version 3.1.4
-  - Minor fixes.
-
-- SimpliFiLogger SDK, version 3.1.3
-  - Console logger is added as a default logger.
- 
-- SimpliFiLogger SDK, version 3.0.0
-  - Logs network error to Mixpanel.
-  - Set custom logger.
- 
-- SimpliFiUI SDK, version 3.0.3
-  - Minor fixes.
-
-- SimpliFiUI SDK, version 3.0.0
-  - Set custom UI theme.
 
 ## Support and Contact Information
 If you need any assistance or have questions regarding SimpliFi SDKs, you can reach out to our support team at daud.mujib@simplifipay.com.
