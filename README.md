@@ -39,7 +39,7 @@ To install the SimpliFiCard SDK, follow these steps:
    
    pod 'SimpliFiCard'
 
-   required_dynamic_frameworks = ['Mixpanel-swift', 'AEOTPTextField']
+   required_dynamic_frameworks = ['Mixpanel-swift', 'AEOTPTextField', 'KeychainAccess']
    post_install do |installer|
      installer.pods_project.targets.each do |target|
        target.build_configurations.each do |config|
