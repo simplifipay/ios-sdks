@@ -83,7 +83,7 @@ To install the SimpliFi SDKs, follow these steps:
    ```
 
 **Note:**
-The SimpliFi SDK requires a minimum iOS version of 13.0 or later. Please ensure that your project's deployment target is set accordingly.
+The SimpliFi SDK requires a minimum iOS version of 14.0 or later. Please ensure that your project's deployment target is set accordingly.
 
 ## SDK Initialization
 Before using the SimpliFi SDKs, you need to initialize the SDK with the base URL. To initialize the SDK, use the following method:
@@ -282,6 +282,9 @@ SimpliFi SDKs prioritize security when handling sensitive data, such as card inf
  verification details. The SDKs implement encryption mechanisms and follow industry best practices to ensure the confidentiality and integrity of the data. However, it is essential to implement additional security measures in your application to protect user data and comply with relevant regulations.
 
 ## Release Notes and Versioning
+- SimpliFiCard SDK, version 5.0.1
+  - Updated card UI
+  
 - SimpliFiCard SDK, version 5.0.0
   - Added support for multilingual. SDK language will remains same as application's language. Supported lanugages are as follows:
     - English (default)
